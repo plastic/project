@@ -1,0 +1,12 @@
+<phpunit>
+	<filter>
+		<blacklist>
+			<directory>lib/</directory>
+			<directory>cakephp/</directory>
+			<directory>plugins/</directory>
+		</blacklist>
+		<whitelist addUncoveredFilesFromWhitelist="true">
+			<directory suffix="*.php">app/</directory>
+		</whitelist>
+	</filter>
+</phpunit>
