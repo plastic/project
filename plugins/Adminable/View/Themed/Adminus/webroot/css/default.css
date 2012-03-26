@@ -1,0 +1,67 @@
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+body {
+	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 50px;
+}
+
+ol, ul {
+    list-style: none outside none;
+}
+
+html {
+	background: #F0F0F0;
+}
+
+.expand-20 {
+	margin: 20px 0;
+}
+
+.expand-10 {
+	margin: 10px 0;
+}
+
+.expand-right {
+	margin-right: 5px;
+}
+
+.box-20 {
+	margin: 0 20px;
+}
+
+.box-10 {
+	margin: 0 10px;
+}
+
+.padding {
+	padding: 5px;
+}
+
+.padding-expand-5 {
+	padding: 5px 0;
+}
+.overflow {
+	overflow: hidden;
+}
+
+.color-info {
+	color: #3A87AD;
+}
+
+.page-header{
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+
+.help-block, .help-inline{
+	color: #888 !important;
+}
+
+form, .form-actions {
+	margin-bottom: 0px !important;
+}

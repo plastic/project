@@ -1,0 +1,72 @@
+
+
+/*FORMS*/
+form{
+	display:block;		
+}
+
+
+label{
+	display:block;
+	font-weight:bold;
+	color:#4D4D4D;
+	margin-bottom:8px;
+	width:100%;	
+}
+div.input.checkbox input{
+	width:20px;
+	clear:both;
+	
+}
+input,textarea,select{
+	width:94%;
+}
+
+input,textarea,select{
+	padding: 6px;
+	font-size: 13px;
+	background: white url('/theme/Adminus/img/bg-form-field.gif') top left repeat-x;
+	border: 1px solid #D5D5D5;
+	color: #333;
+	margin-bottom:20px;
+}
+
+label.check{
+	display:inline;	
+	width:auto;
+	padding-right:5px;
+	float:left;
+}
+input.check{
+	width:10px;
+}
+input.error,textarea.error,select.error{
+	background-color:#f3adad;
+	background-image:none;
+}
+
+span.error{
+	color:#ba0000;
+	font-weight:bold;
+	font-size:12px;
+}
+
+span.required{
+	margin-left:4px;
+	font-size:18px;
+	color:#ba0000;
+}
+
+/*LOGIN*/
+
+#form_login{
+	width:960px;
+	margin:0 auto;
+}
+
+.error-message{
+	font-size:13px;
+	color:red;
+	margin-top:-10px;
+	padding-bottom:10px;
+}

@@ -1,0 +1,35 @@
+div.flash{
+	text-align:center;
+	margin-top:10px;
+	
+}
+
+div.flash p{
+	display:block;
+	padding:10px;
+	width:500px;
+	margin:0 auto;
+}
+
+
+div.flash p.error{
+	border:solid 1px #ba0000;
+	background-color:#f3adad;
+	color:#ba0000;
+}
+
+
+div.flash p.success{
+	border:solid 1px #029231;
+	background-color:#b1e8c3;
+	color:#029231;
+}
+
+div.flash p.warning{
+	border:solid 1px #c5b20d;
+	background-color:#f3f1b5;
+	color:#4d4d4d;
+}
+
+
+

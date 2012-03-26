@@ -1,0 +1,20 @@
+.jeip-saving {
+    background-color: #990033;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 3px 20px;
+}
+.jeip-mouseover, .jeip-editfield {
+    background-color: #FFFF99;
+    padding: 3px;
+}
+.jeip-savebutton {
+    background-color: #66CC00;
+    color: #FFFFFF;
+}
+.jeip-cancelbutton {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+}

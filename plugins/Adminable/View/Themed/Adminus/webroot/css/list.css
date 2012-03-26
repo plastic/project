@@ -1,0 +1,30 @@
+th.action_small{
+	width:200px;
+
+}
+p.actions .adicionar{
+	font-size:14px;
+	color:#4D4D4D;
+	font-weight:bold;
+	padding-left:20px;
+	padding-top:8px;
+}
+
+p.actions .adicionar:hover{
+
+	text-decoration:underline;
+}
+
+td.actions a{
+	width:10px;
+	overflow:hidden;
+	text-indent:-999px;
+	display:block;
+	float:left;
+	padding-right:0;
+}
+
+td.actions a:hover{
+	background-color:#cDcDcD;
+}
+

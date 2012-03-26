@@ -19,8 +19,10 @@
 	<target name="testsuite" description="Run unit tests using PHPUnit and generates clover.xml">
 		<exec executable="php" failonerror="true">
 			<!-- <arg value="${basedir}/lib/Cake/Console/cake.php" /> -->
-			<arg value="${basedir}/cakephp/lib/Cake/Console/cake.php" />
+			<arg value="${basedir}/app/Console/cake.php" />
 			<arg value="testsuite" />
+			<arg value="-app" />
+			<arg value="${basedir}/app" />
 			<arg value="app" />
 			<arg value="AllTests" />
 			<arg value="--no-colors" />

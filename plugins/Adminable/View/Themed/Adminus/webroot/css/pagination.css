@@ -1,0 +1,45 @@
+#navi_length{
+	margin:10px auto;
+	display:block;
+	overflow:hidden;
+	/*width: 400px;*/
+}
+
+
+
+#navi_length ul.first{
+	float:left;
+	display:block;
+	overflow:hidden;
+	margin:0 auto;
+	
+ }
+
+#navi_length  ul li{
+	line-height:21px;
+	float:left;
+	
+}
+
+#navi_length  ul ul li a, #navi_length  ul ul li.current {
+	display:block;
+	padding:0 5px;
+	line-height:30px;
+	color:#4d4d4d;
+	
+}
+
+#navi_length  ul ul li a:hover{
+	display:block;
+	padding:0 5px;
+	line-height:30px;
+	color:#e90086;
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float:right;
+}

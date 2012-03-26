@@ -30,7 +30,7 @@ foreach ($paths as $path) {
 
 if (!$found && function_exists('ini_set')) {
 	$root = dirname(dirname(dirname(__FILE__)));
-	ini_set('include_path', $root . $ds. 'lib' . PATH_SEPARATOR . ini_get('include_path'));
+	ini_set('include_path', $root . $ds . 'cakephp' . $ds . 'lib' . PATH_SEPARATOR . ini_get('include_path'));
 }
 
 if (!include($dispatcher)) {
@@ -38,4 +38,9 @@ if (!include($dispatcher)) {
 }
 unset($paths, $path, $found, $dispatcher, $root, $ds);
 
+/* fix path to app */
+if (!array_search('-app', $argv)) {
+	array_push($argv, '-app');
+	array_push($argv, realpath(basename(dirname(dirname(__FILE__)))));
+}
 return ShellDispatcher::run($argv);

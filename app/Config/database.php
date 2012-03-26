@@ -63,9 +63,10 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
+		'port' => '8889',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'xavel',
+		'database' => 'torratorra',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
@@ -74,9 +75,10 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
+		'port' => '8889',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'xavel',
+		'database' => 'torratorra',
 		'prefix' => 'test_',
 		'encoding' => 'utf8',
 	);

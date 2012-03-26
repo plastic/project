@@ -1,3 +1,9 @@
 /app/tmp
+/app/Config/database.php
 /lib/Cake/Console/Templates/skel/tmp/
+/app/webroot/img/imagecache/*
+/app/webroot/files/*
+/app/webroot/css/combined.*
+/app/webroot/js/combined.*
+/app/webroot/img/file/name/*
 .DS_Store

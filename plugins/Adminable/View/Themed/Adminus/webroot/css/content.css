@@ -1,0 +1,307 @@
+#content {
+	clear: both;
+	padding-bottom: 30px;
+}
+
+.page {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.img {
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 5px #C5C5C5;
+    margin: auto;
+	width: 40px;
+}
+
+.navbar .dropdown-menu:after, .navbar .dropdown-menu:before{
+	border-bottom: 0px !important;
+}
+
+.title-grid {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+
+    background: -moz-linear-gradient(center top , #FDFDFD 0%, #E3E3E3 100%) repeat scroll 0 0 transparent;
+	background-image: -webkit-linear-gradient(center top , #FDFDFD 0%, #E3E3E3 100%);
+	background-image: linear-gradient(center top , #FDFDFD 0%, #E3E3E3 100%);
+	
+    border-color: #E3E3E3 #E3E3E3 -moz-use-text-color;
+    border-style: solid solid none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	-moz-border-top-left-radius: 3px;
+	-moz-border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+    color: #55585D;
+    display: block;
+    font: 16px "Cuprum", Helvetica, Arial, sans-serif;
+    height: 30px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+.content-grid {
+	background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+	-moz-border-bottom-left-radius: 3px;
+	-moz-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+    color: #424242;
+}
+
+div.grid {
+    clear: both;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+
+div.grid.imagens .grid-item {
+	height: 100%;
+}
+
+div.grid .grid-item {
+    border: 1px solid #EEEEEE;
+    float: left;
+    margin: 0.4em;
+    padding: 0.8em;
+    position: relative;
+	height:100%;
+}
+
+.titleInfo {
+	background: #d4d1d3;
+	color: #4D4D4D;
+	font-size: 17px;
+	font-family:"Georgia";
+	font-style:italic;
+	display: block;
+	height: 20px;
+	text-indent: 10px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	padding: 3px 15px 4px;
+	font-weight: normal;
+	border-bottom: 1px solid #CCCCCC;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.content-grid {
+	padding: 10px;
+}
+
+.cleaning {
+    display: block;
+    overflow: hidden;
+}
+
+/*ACTIONS*/
+
+.actions {
+    margin: 0;
+    padding: 0;
+}
+p.actions {
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+}
+ul.actions {
+    margin-top: 1em;
+}
+.actions li {
+    display: inline;
+    margin: 0 0.2em;
+}
+ul.actions a {
+    color: #000000;
+    display: block;
+    float: left;
+    line-height: 16px;
+    margin-right: 0.3em;
+    outline: medium none;
+    padding: 0.2em 0.4em 0.2em 0.2em;
+
+}
+.actions a, .actions input, input.action, .action, .legenda-icone {
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    line-height: 16px;
+    outline: medium none;
+    padding-bottom: 0.2em;
+    padding-left: 20px !important;
+    padding-right: 0.2em;
+    padding-top: 0.2em;
+}
+
+.no-icon {
+    background-image: none !important;
+    padding-left: 0.2em !important;
+}
+
+.aprove-action {
+    margin: 17px;
+}
+.actions.icon a, .action.icon, a.icon {
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 1.7em;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0 0 0 22px;
+    width: 0;
+}
+.actions a {
+    font-size: 110%;
+    outline: medium none;
+}
+a.editar, .legenda-icone.editar {
+    background-image: url("/theme/Adminus/img/edit.gif");
+}
+a.delete, .actions .delete, .legenda-icone.delete {
+	background-image: url("/theme/Adminus/img/icon-excluir.gif");
+    color: #FF0000 !important;
+}
+a.endereco, .legenda-icone.endereco {
+    background-image: url("/theme/Adminus/img/house.gif");
+}
+a.arquivo, .legenda-icone.arquivo {
+    background-image: url("/theme/Adminus/img/document.gif");
+}
+a.excel, .legenda-icone.excel {
+    background-image: url("/theme/Adminus/img/excel.gif");
+}
+a.imagem, .legenda-icone.imagem {
+    background-image: url("/theme/Adminus/img/images.gif");
+}
+a.imagem.empty, .legenda-icone.imagem.empty {
+    background-image: url("/theme/Adminus/img/image_empty.gif");
+}
+a.crosssale, .legenda-icone.crosssale {
+    background-image: url("/theme/Adminus/img/crosssale.gif");
+}
+a.ocorrencia, .legenda-icone.ocorrencia {
+    background-image: url("/theme/Adminus/img/ocurrences.gif");
+}
+a.voltar, .legenda-icone.voltar {
+    background-image: url("/theme/Adminus/img/back.gif");
+	font-size:14px;
+	color:#222222;
+}
+
+a.voltar:hover{
+   text-decoration: underline;
+}
+
+a.visualizar, .legenda-icone.visualizar {
+    background-image: url("/theme/Adminus/img/view.gif");
+}
+
+a.report, .legenda-icone.report {
+    background-image: url("/theme/Adminus/img/report.gif");
+}
+a.cancelar, .legenda-icone.cancelar {
+    background-image: url("/theme/Adminus/img/cancel.gif");
+}
+.action.remover, .legenda-icone.remover {
+    background-image: url("/theme/Adminus/img/remove.gif");
+    color: #FF0000;
+}
+.actions .buscar, .action.buscar, .legenda-icone.buscar {
+    background-image: url("/theme/Adminus/img/search.gif");
+}
+.actions .salvar, .legenda-icone.salvar {
+    background-image: url("/theme/Adminus/img/save.gif");
+	width:100px;
+	background-color:#e4e4e4;
+}
+.actions .next, .legenda-icone.next {
+    background-image: url("/theme/Adminus/img/next.gif");
+}
+.actions .previous, .legenda-icone.previous {
+    background-image: url("/theme/Adminus/img/previous.gif");
+}
+a.adicionar, .action.adicionar, .actions .adicionar, .legenda-icone.adicionar {
+    background-image: url("/theme/Adminus/img/add.gif");
+}
+a.clonar, .action.clonar, .actions .clonar, .legenda-icone.clonar {
+    background-image: url("/theme/Adminus/img/clone.png");
+}
+a.expandir, .action.expandir, .legenda-icone.expandir {
+    background-image: url("/theme/Adminus/img/expand.gif");
+}
+a.recolher, .action.recolher, .legenda-icone.recolher {
+    background-image: url("/theme/Adminus/img/collapse.gif");
+}
+.action.destaque, .action.destaque-1, .legenda-icone.destaque {
+    background-image: url("/theme/Adminus/img/star.gif");
+}
+.action.anexo, .legenda-icone.anexo {
+    background-image: url("/theme/Adminus/img/file.gif");
+}
+.action.destaque-off, .action.destaque-0, .legenda-icone.destaque-off {
+    background-image: url("/theme/Adminus/img/star_off.gif");
+}
+.action.disponivel, .action.disponivel-1, .legenda-icone.disponivel {
+    background-image: url("/theme/Adminus/img/available.gif");
+}
+.action.disponivel-off, .action.disponivel-0, .legenda-icone.disponivel-off {
+    background-image: url("/theme/Adminus/img/available_off.gif");
+}
+a.status-1, .action.status-1, .legenda-icone.status-1 {
+    background-image: url("/theme/Adminus/img/on.gif");
+}
+a.status-0, .action.status-0, .legenda-icone.status-0 {
+    background-image: url("/theme/Adminus/img/off.gif");
+}
+a.destaque.status-1, .legenda-icone.destaque-1 {
+    background-image: url("/theme/Adminus/img/star.gif");
+}
+a.destaque.status-0, .legenda-icone.destaque-0 {
+    background-image: url("/theme/Adminus/img/star_off.gif");
+}
+a.disponivel.status-1, .legenda-icone.disponivel-1 {
+    background-image: url("/theme/Adminus/img/available.gif");
+}
+.legenda-icone .file, a.anexo {
+    background-image: url("/theme/Adminus/img/file.gif");
+}
+a.disponivel.status-0, .legenda-icone.disponivel-0 {
+    background-image: url("/theme/Adminus/img/available_off.gif");
+}
+a.permissao, .legendanda-icone.permissao {
+    background-image: url("/theme/Adminus/img/permission.gif");
+}
+a.senha, .legenda-icone.senha {
+    background-image: url("/theme/Adminus/img/password.gif");
+}
+a.relatorio, .legenda-icone.relatorio {
+    background-image: url("/theme/Adminus/img/report.gif");
+}
+a.delete:hover, .action.remover:hover, .actions .delete:hover, .action.delete:hover {
+/*    background-color: #FFDDDD !important;*/
+}
+.actions.icon a.arquivo, .actions.icon a.endereco {
+/*    width: 2.5em;*/
+}
+
+.actions.icon span {
+    display: none;
+}
+.actions.icon span.count {
+    display: inline;
+}
