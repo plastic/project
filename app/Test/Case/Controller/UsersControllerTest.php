@@ -99,7 +99,7 @@ class UsersControllerTest extends ControllerTestCase {
 	
 	public function testSearch() {
 		$this->generate('Users', array('models' => array()));
-		$result = $this->testAction('/admin/users/search', array('return' => 'vars', 'method' => 'post', 'data' => array('User' => array('search' => 'mkt'))));
+		$result = $this->testAction('/admin/users/search', array('return' => 'vars', 'method' => 'get', 'data' => array('search' => 'mkt')));
 	}
 	
 	public function testDel() {
