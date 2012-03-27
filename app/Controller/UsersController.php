@@ -26,11 +26,11 @@ class UsersController extends AppController {
 	public function admin_search() {
 		$this->autoRender = false;
 		$conditions = null;
-		if (!empty($this->request->data['User']['search'])) {
+		if (isset($this->request->query['search']) && !empty($this->request->query['search'])) {
 			$conditions[] = array(
 				'OR' => array(
-					'User.name LIKE' => '%' . $this->request->data['User']['search'] . '%',
-					'User.email LIKE' => '%' . $this->request->data['User']['search'] . '%'
+					'User.name LIKE' => '%' . $this->request->query['search'] . '%',
+					'User.email LIKE' => '%' . $this->request->query['search'] . '%'
 				)
 			);
 			$this->paginate['conditions'] = $conditions;

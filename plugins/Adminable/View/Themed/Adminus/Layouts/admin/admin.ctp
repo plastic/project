@@ -19,7 +19,7 @@
 					
 					<?php echo $this->element('admin/menu') ?>
 					
-					<?php echo $this->Form->create('User', array('method' => 'GET', 'url' => array('controller' => 'users', 'action' => 'search'), 'class' => 'navbar-search pull-left')) ?>
+					<?php echo $this->Form->create('User', array('type' => 'GET', 'url' => array('controller' => 'users', 'action' => 'search'), 'class' => 'navbar-search pull-left')) ?>
 						<?php echo $this->Form->input('search', array('type' => 'text', 'placeholder' => 'Busca', 'class' => 'search-query', 'div' => false, 'label' => false)) ?>
 					<?php echo $this->Form->end() ?>
 					
