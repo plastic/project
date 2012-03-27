@@ -18,7 +18,7 @@ class UsersControllerTest extends ControllerTestCase {
 	}
 
 	public function tearDown() {
-		unset($this->Files);
+		unset($this->Users);
 		ClassRegistry::flush();
 	}
 	
