@@ -43,7 +43,7 @@
 					<div class="controls">
 						<div class="input-prepend">
 							<span class="add-on"><i class="icon-asterisk"></i></span><?php echo $this->Form->input('password', array('type' => 'password', 'label' => false, 'div' => false, 'class' => 'input-xlarge')); ?>
-							<p class="help-block">Senha contendo no mínimo 6 carasteres</p>
+							<p class="help-block">Senha contendo no mínimo 6 caracteres</p>
 						</div>
 					</div>
 				</div>

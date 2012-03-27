@@ -25,7 +25,7 @@
 							<td><?php echo $user['User']['email']; ?></td>
 							<td>
 								<?php echo $this->Html->link('<i class="icon-pencil icon-white"></i>', array('action' => 'edit', $user['User']['id']), array('title' => 'Editar', 'escape' => false, 'class' => 'btn btn-small btn-warning')); ?>
-								<?php echo $this->Html->link('<i class="icon-trash icon-white"></i>', array('action' => 'delete', $user['User']['id']), array('escape' => false, 'class' => 'btn btn-danger btn-small', 'title' => 'Excluir'), 'Deseja realmente excluir este usuário?'); ?>
+								<?php echo $this->Html->link('<i class="icon-trash icon-white"></i>', array('action' => 'del', $user['User']['id']), array('escape' => false, 'class' => 'btn btn-danger btn-small', 'title' => 'Excluir'), 'Deseja realmente excluir este usuário?'); ?>
 							</td>
 						</tr>
 						<?php $count++ ?>
