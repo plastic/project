@@ -4,3 +4,6 @@
 [submodule "plugins/migrations"]
 	path = plugins/migrations
 	url = git://github.com/CakeDC/migrations.git
+[submodule "plugins/Media"]
+	path = plugins/Media
+	url = https://aeolu@github.com/aeolu/CakePHP-Media-Plugin.git
