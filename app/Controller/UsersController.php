@@ -68,9 +68,20 @@ class UsersController extends AppController {
 	public function admin_add() {
 		if ($this->request->is('post') && !empty($this->request->data)) {
 			if ($this->User->save($this->request->data)) {
-				$this->setFlashMessage('Usuário criado com sucesso!', 'success', array('action' => 'index'));
+				$name = $this->User->read();
+				$file['name'] = $name['User']['basename'];
+				$file['size'] = $this->request->data['User']['file']['size'];
+				$file['url'] = '/media/transfer/img/' . $name['User']['basename'];
+				$file['thumbnail_url'] = '/media/filter/thumbnail/img/' . $name['User']['basename'];
+				//$this->setFlashMessage('Usuário criado com sucesso!', 'success', array('action' => 'index'));
+			} else {
+				$file = 'Error';
 			}
+			$this->RequestHandler->renderAs($this, 'ajax');
+			$this->set('file', '['.json_encode($file).']');
+			$this->render('/elements/admin/ajax');
 		}
+		$this->set('user', AuthComponent::user() );
 	}
 	
 	public function admin_del($id=null) {

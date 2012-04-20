@@ -1,4 +1,9 @@
-/app/tmp
+/app/tmp/cache/models/*
+/app/tmp/cache/persistent/*
+/app/tmp/cache/views/*
+/app/tmp/cache/sessions/*
+/app/tmp/cache/tests/*
+/app/tmp/logs/*
 /app/Config/database.php
 /lib/Cake/Console/Templates/skel/tmp/
 /app/webroot/img/imagecache/*
@@ -6,4 +11,5 @@
 /app/webroot/css/combined.*
 /app/webroot/js/combined.*
 /app/webroot/img/file/name/*
+/app/webroot/media/*
 .DS_Store

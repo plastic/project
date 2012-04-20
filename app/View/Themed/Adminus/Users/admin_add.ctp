@@ -1,7 +1,5 @@
 <div class="expand-10">
 	
-	<!-- <h2 class="title-grid">Usuário</h2> -->
-	
 	<?php
 	$this->Html->addCrumb('Usuários', '/admin/users');
 	$this->Html->addCrumb('Adicionar', false, array('class' => 'active'));
@@ -13,7 +11,7 @@
 	
 	<div class="content-grid">
 		
-		<?php echo $this->Form->create('User', array('method' => 'post', 'class' => 'form-horizontal')); ?>
+		<?php echo $this->Form->create('User', array('method' => 'post', 'class' => 'form-horizontal', 'type' => 'file', 'id' => 'fileupload')); ?>
 			
 			<fieldset>
 				<legend>Adicionar</legend>

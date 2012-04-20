@@ -69,3 +69,19 @@ App::build(array(
  */
 CakePlugin::load('Migrations');
 CakePlugin::load('Adminable', array('bootstrap' => true));
+
+CakePlugin::load('Media');
+require ROOT . DS . 'plugins' . DS . 'Media' . DS . 'Config' . DS . 'core.php';
+
+$small = array('fitCrop' => array(50, 50));
+$thumbnail = array('fit' => array(100, 100));
+$sales = array('fitCrop' => array(200, 200));
+$large = array('fit' => array(1024, 800));
+
+Configure::write('Media.filter', array('default' => array(
+	'audio' => array(),
+	'document' => array(),
+	'generic' => array(),
+	'image' => compact('small', 'thumbnail', 'sales', 'large'),
+	'video' => compact('medium', 'large')
+)));
