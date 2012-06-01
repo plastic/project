@@ -1,7 +1,5 @@
 <div class="expand-10">
 	
-	<!-- <h2 class="title-grid">Usuário</h2> -->
-	
 	<?php
 	$this->Html->addCrumb('Usuários', '/admin/users');
 	$this->Html->addCrumb('Adicionar', false, array('class' => 'active'));
@@ -13,7 +11,7 @@
 	
 	<div class="content-grid">
 		
-		<?php echo $this->Form->create('User', array('method' => 'post', 'class' => 'form-horizontal')); ?>
+		<?php echo $this->Form->create('User', array('method' => 'post', 'class' => 'form-horizontal', 'type' => 'file', 'id' => 'fileupload')); ?>
 			
 			<fieldset>
 				<legend>Adicionar</legend>
@@ -43,7 +41,7 @@
 					<div class="controls">
 						<div class="input-prepend">
 							<span class="add-on"><i class="icon-asterisk"></i></span><?php echo $this->Form->input('password', array('type' => 'password', 'label' => false, 'div' => false, 'class' => 'input-xlarge')); ?>
-							<p class="help-block">Senha contendo no mínimo 6 carasteres</p>
+							<p class="help-block">Senha contendo no mínimo 6 caracteres</p>
 						</div>
 					</div>
 				</div>

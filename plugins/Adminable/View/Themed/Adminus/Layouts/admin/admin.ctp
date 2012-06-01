@@ -19,7 +19,7 @@
 					
 					<?php echo $this->element('admin/menu') ?>
 					
-					<?php echo $this->Form->create('User', array('method' => 'GET', 'url' => array('controller' => 'users', 'action' => 'search'), 'class' => 'navbar-search pull-left')) ?>
+					<?php echo $this->Form->create('User', array('type' => 'GET', 'url' => array('controller' => 'users', 'action' => 'search'), 'class' => 'navbar-search pull-left')) ?>
 						<?php echo $this->Form->input('search', array('type' => 'text', 'placeholder' => 'Busca', 'class' => 'search-query', 'div' => false, 'label' => false)) ?>
 					<?php echo $this->Form->end() ?>
 					
@@ -29,7 +29,9 @@
 						<ul class="dropdown-menu">
 							<li><a href="<?php echo $this->Html->url('/admin/users/edit/' . SessionHelper::read('Auth.User.id')) ?>"><i class="icon-pencil"></i> Editar</a></li>
 							<li class="divider"></li>
-							<li><a href="/admin/users/logout"><i class="icon-off"></i> Sair</a></li>
+							<li>
+								<?php echo $this->Html->link('<i class="icon-off"></i> Sair', '/admin/users/logout', array('escape' => false)) ?>
+							</li>
 						</ul>
 					</div>
 				<?php endif ?>

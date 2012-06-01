@@ -1,6 +1,5 @@
 <div class="expand-10">
 	
-	<!-- <h2 class="title-grid">Usuário</h2> -->
 	<?php
 	$this->Html->addCrumb('Usuários', '/admin/users');
 	$this->Html->addCrumb('Editar', false, array('class' => 'active'));
@@ -16,7 +15,8 @@
 			
 			<fieldset>
 				<legend>Alterar</legend>
-				<?php echo $this->Form->hidden('id') ?>
+				
+				<?php echo $this->Form->hidden('id'); ?>
 				
 				<div class="control-group">
 					<label class="control-label" for="input01">Nome</label>
@@ -43,7 +43,7 @@
 					<div class="controls">
 						<div class="input-prepend">
 							<span class="add-on"><i class="icon-asterisk"></i></span><?php echo $this->Form->input('password', array('type' => 'password', 'label' => false, 'div' => false, 'class' => 'input-xlarge')); ?>
-							<p class="help-block">Senha contendo no mínimo 6 carasteres</p>
+							<p class="help-block">Senha contendo no mínimo 6 caracteres</p>
 						</div>
 					</div>
 				</div>

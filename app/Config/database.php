@@ -66,7 +66,7 @@ class DATABASE_CONFIG {
 		'port' => '8889',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'torratorra',
+		'database' => 'project',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
@@ -78,7 +78,7 @@ class DATABASE_CONFIG {
 		'port' => '8889',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'torratorra',
+		'database' => 'project',
 		'prefix' => 'test_',
 		'encoding' => 'utf8',
 	);

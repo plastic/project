@@ -6,8 +6,8 @@
 <?php
 $jsList = array('admin');
 
-if (isset($this->requestJs))
-	$jsList[] = $this->requestJs;
+if (isset($this->viewVars['requestJs']))
+	$jsList[] = $this->viewVars['requestJs'];
 	
 echo $this->ScriptCombiner->js($jsList);
 ?>
