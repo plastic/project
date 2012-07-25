@@ -50,10 +50,10 @@ class User extends AppModel {
 		return true;
 	}
 	
-	protected function verifies() {
-		if (!isset($this->data['User']['cpassword'])) {
+	public function verifies() {
+		if (!isset($this->data[$this->alias]['cpassword'])) {
 			return false;
 		}
-		return ($this->data['User']['password'] === $this->data['User']['cpassword']);
+		return ($this->data[$this->alias]['password'] === $this->data[$this->alias]['cpassword']);
 	}
 }

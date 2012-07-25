@@ -84,6 +84,7 @@ class UsersController extends AppController {
 	
 	/* cria o primeiro usuário/operador */
 	public function create() {
+		$this->autoRender = false;
 		if ($this->User->save(array('name' => 'Mkt Virtual', 'email' => 'mktvirtual@mktvirtual.com.br', 'password' => '123456', 'cpassword' => '123456'))) {
 			$this->setFlashMessage('Usuário adicionado com sucesso!', 'success', array('admin' => true, 'controller' => 'users', 'action' => 'login'));
 		}

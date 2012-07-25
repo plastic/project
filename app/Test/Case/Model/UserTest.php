@@ -18,7 +18,7 @@ class UserTestCase extends CakeTestCase {
 	}
 	
 	public function testSave() {
-		$this->assertFalse($this->User->save(array('name' => 'andre', 'email' => '', 'password' => '123456')));
+		$this->assertFalse($this->User->save(array('name' => 'andre', 'email' => '', 'password' => '123456', 'cpassword' => '')));
 		$this->assertFalse($this->User->save(array('name' => 'andre', 'email' => 'mktvirtual@mktvirtual.com.br', 'password' => '123456')));
 		$this->assertFalse($this->User->save(array('name' => 'andre', 'email' => 'mktvirtual@mktvirtual.com.br', 'password' => '')));
 		$this->assertFalse($this->User->save(array('name' => 'andre', 'email' => 'mktvirtual@mktvirtual.com.br', 'password' => '12345', 'cpassword' => '12345')));
