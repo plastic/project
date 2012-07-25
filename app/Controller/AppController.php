@@ -34,6 +34,7 @@ class AppController extends Controller {
 			$this->theme = 'Adminus';
 			$this->layoutPath = 'admin';
 			$this->layout = 'admin';
+			$this->helpers[] = 'Adminable.Admin';
 		}
 	}
 	

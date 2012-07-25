@@ -1,9 +1,3 @@
-<?php
-$this->Paginator->options(array(
-	'update' => '#content',
-	'evalScripts' => true,
-));
-?>
 <?php if ($this->Paginator->hasPrev() || $this->Paginator->hasNext()) : ?>
 	<div class="pagination">
 		<ul>
@@ -17,3 +11,8 @@ $this->Paginator->options(array(
 <p class="cleaning bold">
 	<?php echo $this->Paginator->counter('Total: {:count}'); ?>
 </p>
+
+<?php echo $this->Html->scriptBlock("
+	text = jQuery('.active').text();
+	jQuery('.active').empty().append('<a>' + text + '</a>');
+", array('inline' => false)) ?>

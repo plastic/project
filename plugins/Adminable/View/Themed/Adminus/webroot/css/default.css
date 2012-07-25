@@ -34,6 +34,9 @@ html {
 	margin: 0 20px;
 }
 
+.box-40 {
+	margin: 0 40px;
+}
 .box-10 {
 	margin: 0 10px;
 }
@@ -49,6 +52,11 @@ html {
 	overflow: hidden;
 }
 
+.label-login{
+	width: 50px;
+	padding-top:3px
+}
+
 .color-info {
 	color: #3A87AD;
 }
@@ -58,10 +66,21 @@ html {
 	margin-right: 20px !important;
 }
 
-.help-block, .help-inline{
+.help-block, .help-inline {
 	color: #888 !important;
-}
+	}
+	.control-group.error .help-block, .control-group.error .help-inline{
+		color: #B94A48 !important;
+		}
 
 form, .form-actions {
 	margin-bottom: 0px !important;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
 }

@@ -1,32 +1,16 @@
-/*
- * jQuery UI Widget 1.8.18+amd
- * https://github.com/blueimp/jQuery-File-Upload
- *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Widget
- */
-
 (function (factory) {
     if (typeof define === "function" && define.amd) {
-        // Register as an anonymous AMD module:
         define(["jquery"], factory);
     } else {
-        // Browser globals:
         factory(jQuery);
     }
 }(function( $, undefined ) {
-
-// jQuery 1.4+
 if ( $.cleanData ) {
 	var _cleanData = $.cleanData;
 	$.cleanData = function( elems ) {
 		for ( var i = 0, elem; (elem = elems[i]) != null; i++ ) {
 			try {
 				$( elem ).triggerHandler( "remove" );
-			// http://bugs.jquery.com/ticket/8235
 			} catch( e ) {}
 		}
 		_cleanData( elems );
@@ -40,7 +24,6 @@ if ( $.cleanData ) {
 					$( "*", this ).add( [ this ] ).each(function() {
 						try {
 							$( this ).triggerHandler( "remove" );
-						// http://bugs.jquery.com/ticket/8235
 						} catch( e ) {}
 					});
 				}
@@ -61,28 +44,18 @@ $.widget = function( name, base, prototype ) {
 		base = $.Widget;
 	}
 
-	// create selector for plugin
 	$.expr[ ":" ][ fullName ] = function( elem ) {
 		return !!$.data( elem, name );
 	};
 
 	$[ namespace ] = $[ namespace ] || {};
 	$[ namespace ][ name ] = function( options, element ) {
-		// allow instantiation without initializing for simple inheritance
 		if ( arguments.length ) {
 			this._createWidget( options, element );
 		}
 	};
 
 	var basePrototype = new base();
-	// we need to make the options hash a property directly on the new instance
-	// otherwise we'll modify the options hash on the prototype that we're
-	// inheriting from
-//	$.each( basePrototype, function( key, val ) {
-//		if ( $.isPlainObject(val) ) {
-//			basePrototype[ key ] = $.extend( {}, val );
-//		}
-//	});
 	basePrototype.options = $.extend( true, {}, basePrototype.options );
 	$[ namespace ][ name ].prototype = $.extend( true, basePrototype, {
 		namespace: namespace,
@@ -99,13 +72,9 @@ $.widget.bridge = function( name, object ) {
 		var isMethodCall = typeof options === "string",
 			args = Array.prototype.slice.call( arguments, 1 ),
 			returnValue = this;
-
-		// allow multiple hashes to be passed on init
 		options = !isMethodCall && args.length ?
 			$.extend.apply( null, [ true, options ].concat(args) ) :
 			options;
-
-		// prevent calls to internal methods
 		if ( isMethodCall && options.charAt( 0 ) === "_" ) {
 			return returnValue;
 		}
@@ -116,15 +85,6 @@ $.widget.bridge = function( name, object ) {
 					methodValue = instance && $.isFunction( instance[options] ) ?
 						instance[ options ].apply( instance, args ) :
 						instance;
-				// TODO: add this back in 1.9 and use $.error() (see #5972)
-//				if ( !instance ) {
-//					throw "cannot call methods on " + name + " prior to initialization; " +
-//						"attempted to call method '" + options + "'";
-//				}
-//				if ( !$.isFunction( instance[options] ) ) {
-//					throw "no such method '" + options + "' for " + name + " widget instance";
-//				}
-//				var methodValue = instance[ options ].apply( instance, args );
 				if ( methodValue !== instance && methodValue !== undefined ) {
 					returnValue = methodValue;
 					return false;
@@ -140,13 +100,11 @@ $.widget.bridge = function( name, object ) {
 				}
 			});
 		}
-
 		return returnValue;
 	};
 };
 
 $.Widget = function( options, element ) {
-	// allow instantiation without initializing for simple inheritance
 	if ( arguments.length ) {
 		this._createWidget( options, element );
 	}
@@ -159,8 +117,6 @@ $.Widget.prototype = {
 		disabled: false
 	},
 	_createWidget: function( options, element ) {
-		// $.widget.bridge stores the plugin instance, but we do it anyway
-		// so that it's stored even before the _create function runs
 		$.data( element, this.widgetName, this );
 		this.element = $( element );
 		this.options = $.extend( true, {},
@@ -201,7 +157,6 @@ $.Widget.prototype = {
 
 	option: function( key, value ) {
 		var options = key;
-
 		if ( arguments.length === 0 ) {
 			// don't return a reference to the internal hash
 			return $.extend( {}, this.options );
@@ -214,9 +169,7 @@ $.Widget.prototype = {
 			options = {};
 			options[ key ] = value;
 		}
-
 		this._setOptions( options );
-
 		return this;
 	},
 	_setOptions: function( options ) {
@@ -224,7 +177,6 @@ $.Widget.prototype = {
 		$.each( options, function( key, value ) {
 			self._setOption( key, value );
 		});
-
 		return this;
 	},
 	_setOption: function( key, value ) {
@@ -257,11 +209,7 @@ $.Widget.prototype = {
 		event.type = ( type === this.widgetEventPrefix ?
 			type :
 			this.widgetEventPrefix + type ).toLowerCase();
-		// the original event may come from any element
-		// so we need to reset the target on the new event
 		event.target = this.element[ 0 ];
-
-		// copy original event properties over to the new event
 		orig = event.originalEvent;
 		if ( orig ) {
 			for ( prop in orig ) {
@@ -270,13 +218,10 @@ $.Widget.prototype = {
 				}
 			}
 		}
-
 		this.element.trigger( event, data );
-
 		return !( $.isFunction(callback) &&
 			callback.call( this.element[0], event, data ) === false ||
 			event.isDefaultPrevented() );
 	}
 };
-
 }));

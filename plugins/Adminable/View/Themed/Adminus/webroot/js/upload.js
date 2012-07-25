@@ -5,7 +5,7 @@
 //= require "jQuery-File-Upload/js/bootstrap-image-gallery.min"
 //= require "jQuery-File-Upload/js/jquery.iframe-transport"
 //= require "jQuery-File-Upload/js/jquery.fileupload"
-//= require "jQuery-File-Upload/js/jquery.fileupload"
+//= require "jQuery-File-Upload/js/jquery.fileupload-ip"
 //= require "jQuery-File-Upload/js/jquery.fileupload-ui"
 //= require "jQuery-File-Upload/js/locale"
 //= require "jQuery-File-Upload/js/main"
