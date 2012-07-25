@@ -4,6 +4,7 @@
 /app/tmp/cache/sessions/*
 /app/tmp/cache/tests/*
 /app/tmp/logs/*
+!/app/tmp/logs/empty
 /app/Config/database.php
 /lib/Cake/Console/Templates/skel/tmp/
 /app/webroot/img/imagecache/*
