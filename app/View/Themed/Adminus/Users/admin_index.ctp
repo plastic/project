@@ -24,22 +24,21 @@
 							<td><?php echo $user['User']['name']; ?></td>
 							<td><?php echo $user['User']['email']; ?></td>
 							<td>
-								<?php echo $this->Html->link('<i class="icon-picture icon-white"></i>', array('controller' => 'images', 'action' => 'add', $user['User']['id']), array('title' => 'Adicionar imagens', 'escape' => false, 'class' => 'btn btn-small btn-primary')); ?>
 								<?php echo $this->Html->link('<i class="icon-pencil icon-white"></i>', array('action' => 'edit', $user['User']['id']), array('title' => 'Editar', 'escape' => false, 'class' => 'btn btn-small btn-warning')); ?>
 								<?php echo $this->Html->link('<i class="icon-trash icon-white"></i>', array('action' => 'del', $user['User']['id']), array('escape' => false, 'class' => 'btn btn-danger btn-small', 'title' => 'Excluir'), 'Deseja realmente excluir este usuário?'); ?>
 							</td>
 						</tr>
 						<?php $count++ ?>
 					<?php endforeach; ?>
-
+					
 				</table>
 			
 				<p><?php echo $this->element('admin/pagination') ?></p>
 			
 			<?php else : ?>
-			
-				<p class="warning">Não existem usuários!</p>
-			
+				
+				<?php echo $this->Admin->warning('Não existem usuários!') ?>
+				
 			<?php endif ?>
 		
 		</div>

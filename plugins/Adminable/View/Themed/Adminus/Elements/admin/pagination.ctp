@@ -13,6 +13,6 @@
 </p>
 
 <?php echo $this->Html->scriptBlock("
-	text = jQuery('.active').text();
-	jQuery('.active').empty().append('<a>' + text + '</a>');
+	text = jQuery('.pagination .active').text();
+	jQuery('.pagination .active').empty().append('<a>' + text + '</a>');
 ", array('inline' => false)) ?>

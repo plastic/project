@@ -3,6 +3,7 @@ class UsersController extends AppController {
 	
 	public $paginate = array(
 		'limit' => 20,
+		'paramType' => 'querystring',
 		'order' => array(
 			'User.created' => 'DESC'
 		)
