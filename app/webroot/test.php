@@ -18,32 +18,15 @@
  */
 set_time_limit(0);
 ini_set('display_errors', 1);
-/**
- * Use the DS to separate the directories in other defines
- */
-	if (!defined('DS')) {
-		define('DS', DIRECTORY_SEPARATOR);
-	}
-/**
- * These defines should only be edited if you have cake installed in
- * a directory layout other than the way it is distributed.
- * When using custom settings be sure to use the DS and do not add a trailing DS.
- */
-
-/**
- * The full path to the directory which holds "app", WITHOUT a trailing DS.
- *
- */
-	if (!defined('ROOT')) {
-		define('ROOT', dirname(dirname(dirname(__FILE__))));
-	}
-/**
- * The actual directory name for the "app".
- *
- */
-	if (!defined('APP_DIR')) {
-		define('APP_DIR', basename(dirname(dirname(__FILE__))));
-	}
+if (!defined('DS')) {
+	define('DS', DIRECTORY_SEPARATOR);
+}
+if (!defined('ROOT')) {
+	define('ROOT', dirname(dirname(dirname(__FILE__))));
+}
+if (!defined('APP_DIR')) {
+	define('APP_DIR', basename(dirname(dirname(__FILE__))));
+}
 
 /**
  * The absolute path to the "Cake" directory, WITHOUT a trailing DS.

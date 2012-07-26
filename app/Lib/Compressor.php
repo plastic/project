@@ -18,10 +18,10 @@ class Compressor {
 		$this->settings = array_merge($this->settings, $settings);
 	}
 
-	public function process($object, $url) {
+	public function process($object) {
 		$this->extension = end(explode('.', $object));
 		$fileName = $this->_findFile($object);
-		$this->_preprocess($fileName, $url);
+		$this->_preprocess($fileName);
 		$out = trim($this->_processedOutput);
 		return $out;
 	}
@@ -70,6 +70,7 @@ class Compressor {
 			$viewPaths = App::path('views');
 			
 			foreach ($viewPaths as $viewPath) {
+				unset($viewPath);
 				$path = App::themePath($themeName) . 'webroot' . DS;
 				if (file_exists($path . $fileFragment)) {
 					return $path . $fileFragment;
@@ -88,7 +89,7 @@ class Compressor {
 		throw new Exception('Could not locate file for ' . $object);
 	}
 
-	protected function _preprocess($filename, $url = null) {
+	protected function _preprocess($filename) {
 		if (in_array($filename, $this->_processedFiles)) {
 			return '';
 		}
