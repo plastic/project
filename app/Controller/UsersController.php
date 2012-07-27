@@ -11,7 +11,7 @@ class UsersController extends AppController {
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('create');
+		$this->Auth->allow('create', 'contato');
 	}
 	
 	public function admin_login() {
@@ -87,6 +87,12 @@ class UsersController extends AppController {
 		$this->autoRender = false;
 		if ($this->User->save(array('name' => 'Mkt Virtual', 'email' => 'mktvirtual@mktvirtual.com.br', 'password' => '123456', 'cpassword' => '123456'))) {
 			$this->setFlashMessage('Usuário adicionado com sucesso!', 'success', array('admin' => true, 'controller' => 'users', 'action' => 'login'));
+		}
+	}
+	
+	public function contato() {
+		if (!empty($this->request->data)) {
+			$this->User->contato($this->request->data);
 		}
 	}
 }

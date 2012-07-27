@@ -1,4 +1,5 @@
 <?php
+App::uses('CakeEmail', 'Network/Email');
 App::uses('AuthComponent', 'Controller/Component');
 
 class User extends AppModel {
@@ -56,4 +57,20 @@ class User extends AppModel {
 		}
 		return ($this->data[$this->alias]['password'] === $this->data[$this->alias]['cpassword']);
 	}
+	
+	/*
+	public function contato($options=null) {
+		$cakeEmail = new CakeEmail();
+		$cakeEmail->template('contato', 'default')
+			->config('smtp')
+			->emailFormat('html')
+			->to('email@email.com')
+			->subject('Assunto')
+			->from(array('email@email.com' => 'Site'))
+			->sender(array('email@email.com' => 'Site'))
+			#->viewVars(array('data' => $date))
+			->send();
+		return true;
+	}
+	*/
 }
