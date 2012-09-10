@@ -9,7 +9,7 @@
 
 <body>
 
-<?php if (SessionHelper::read('Auth.User.id')) : ?>	
+<?php if ($this->Session->read('Auth.User.id')) : ?>
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -23,9 +23,9 @@
 				<?php echo $this->Form->end() ?>
 				
 				<div class="btn-group pull-right">
-					<a href="<?php echo $this->Html->url('/admin/users/edit/' . SessionHelper::read('Auth.User.id')); ?>" class="btn btn-primary"><i class="icon-user icon-white"></i> <?php echo SessionHelper::read('Auth.User.name'); ?></a><a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+					<a href="<?php echo $this->Html->url('/admin/users/edit/' . $this->Session->read('Auth.User.id')); ?>" class="btn btn-primary"><i class="icon-user icon-white"></i> <?php echo $this->Session->read('Auth.User.name'); ?></a><a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->Html->url('/admin/users/edit/' . SessionHelper::read('Auth.User.id')) ?>"><i class="icon-pencil"></i> Editar</a></li>
+						<li><a href="<?php echo $this->Html->url('/admin/users/edit/' . $this->Session->read('Auth.User.id')) ?>"><i class="icon-pencil"></i> Editar</a></li>
 						<li class="divider"></li>
 						<li><?php echo $this->Html->link('<i class="icon-off"></i> Sair', '/admin/users/logout', array('escape' => false)) ?></li>
 					</ul>
